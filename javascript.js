@@ -41,13 +41,15 @@ function playRound(playerSelection, computerSelection) {
         return "You lose! Scissors beats Paper!";
     } else if (playerSelection === "Scissors" && computerSelection === "Rock") {
         return "You lose! Rock beats Scissors!";
+    } else if (playerSelection === computerSelection) {
+        return `You've tied -- ${playerSelection} to ${computerSelection}!`;
     } else {
         return "Error";
     }
     
 }
 
-const playerSelection = "Rock";
+const playerSelection = "Scissors";
 const computerSelection = getComputerChoice();
 
 console.log("Player choice: " + playerSelection);
